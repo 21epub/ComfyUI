@@ -1,5 +1,6 @@
 import os
 import time
+from urllib.parse import urljoin
 
 supported_pt_extensions = set(['.ckpt', '.pt', '.bin', '.pth', '.safetensors'])
 
@@ -7,6 +8,8 @@ folder_names_and_paths = {}
 
 base_path = os.path.dirname(os.path.realpath(__file__))
 models_dir = os.path.join(base_path, "models")
+media_dir = os.path.join(base_path, "media")
+media_url = "/epub360-media/"
 folder_names_and_paths["checkpoints"] = ([os.path.join(models_dir, "checkpoints")], supported_pt_extensions)
 folder_names_and_paths["configs"] = ([os.path.join(models_dir, "configs")], [".yaml"])
 
@@ -33,10 +36,11 @@ folder_names_and_paths["photomaker"] = ([os.path.join(models_dir, "photomaker")]
 
 folder_names_and_paths["classifiers"] = ([os.path.join(models_dir, "classifiers")], {""})
 
-output_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "output")
-temp_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "temp")
-input_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "input")
-user_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "user")
+output_directory = os.path.join(media_dir, "output")
+output_url = media_url + "output/"
+temp_directory = os.path.join(media_dir, "temp")
+input_directory = os.path.join(media_dir, "input")
+user_directory = os.path.join(media_dir, "user")
 
 filename_list_cache = {}
 
@@ -85,7 +89,10 @@ def get_directory_by_type(type_name):
 # determine base_dir rely on annotation if name is 'filename.ext [annotation]' format
 # otherwise use default_path as base_dir
 def annotated_filepath(name):
-    if name.endswith("[output]"):
+    if name.startswith(media_url):
+        name = name[len(media_url):]
+        base_dir = media_dir
+    elif name.endswith("[output]"):
         base_dir = get_output_directory()
         name = name[:-9]
     elif name.endswith("[input]"):
@@ -260,3 +267,8 @@ def get_save_image_path(filename_prefix, output_dir, image_width=0, image_height
         os.makedirs(full_output_folder, exist_ok=True)
         counter = 1
     return full_output_folder, filename, counter, subfolder, filename_prefix
+
+
+def get_file_url(full_output_folder, filename):
+    media_path = full_output_folder[len(media_dir):]
+    return urljoin(media_url + media_path, filename)

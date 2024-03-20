@@ -1446,6 +1446,7 @@ class SaveImage:
             results.append({
                 "filename": file,
                 "subfolder": subfolder,
+                "url": folder_paths.get_file_url(full_output_folder, file),
                 "type": self.type
             })
             counter += 1

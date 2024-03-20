@@ -3,6 +3,9 @@ __pycache__/
 /output/
 /input/
 !/input/example.png
+/media/
+!/media/input/example.png
+.python-version
 /models/
 /temp/
 /custom_nodes/
