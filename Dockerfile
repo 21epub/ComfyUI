@@ -4,4 +4,4 @@ ADD ./requirements-patch.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 ADD . /opt/app
 WORKDIR /opt/app
-CMD  ["python", "main.py"]
+CMD  ["python3", "main.py"]
