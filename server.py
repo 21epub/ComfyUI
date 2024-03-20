@@ -245,8 +245,22 @@ class PromptServer():
 
             return image_upload(post, image_save_function)
 
+
+        def view_redirect(request):
+            if "filename" in request.rel_url.query:
+                filename = request.rel_url.query["filename"]
+                if filename.startswith("http://") or filename.startswith("https://"):
+                    return web.HTTPFound(filename)
+                if "subfolder" in request.rel_url.query:
+                    subfolder = request.rel_url.query["subfolder"]
+                    if subfolder.startswith("http://") or subfolder.startswith("https://"):
+                        return web.HTTPFound(subfolder+filename)
+
         @routes.get("/view")
         async def view_image(request):
+            response = view_redirect(request)
+            if response:
+                return response
             if "filename" in request.rel_url.query:
                 filename = request.rel_url.query["filename"]
                 filename,output_dir = folder_paths.annotated_filepath(filename)

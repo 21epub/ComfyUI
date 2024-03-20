@@ -1,0 +1,7 @@
+.gitignore
+.git
+.github
+media
+models
+Dockerfile
+*.log
