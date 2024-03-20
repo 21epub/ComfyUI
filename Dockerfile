@@ -4,4 +4,5 @@ ADD ./requirements-patch.txt /tmp/requirements.txt
 RUN pip install  --progress-bar off -r /tmp/requirements.txt
 ADD . /opt/app
 WORKDIR /opt/app
-CMD  ["python3", "main.py"]
+RUN pip install supervisor
+CMD  ["supervisord", "-c", "/opt/app/supervisord.conf"]
