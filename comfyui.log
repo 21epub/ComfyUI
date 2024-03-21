@@ -1,0 +1,68 @@
+** ComfyUI startup time: 2024-03-21 09:19:17.278613
+[2024-03-21 09:19] ** Platform: Darwin
+[2024-03-21 09:19] ** Python version: 3.10.10 (main, Jun  8 2023, 15:26:40) [Clang 14.0.0 (clang-1400.0.29.202)]
+[2024-03-21 09:19] ** Python executable: /Users/wangjian/.pyenv/versions/3.10.10/envs/ComfyUIEnv/bin/python
+[2024-03-21 09:19] ** Log path: /Users/wangjian/Documents/GitHub/learn/test/ComfyUI/comfyui.log
+[2024-03-21 09:19] 
+Prestartup times for custom nodes:
+[2024-03-21 09:19]    0.2 seconds: /Users/wangjian/Documents/GitHub/learn/test/ComfyUI/custom_nodes/ComfyUI-Manager
+[2024-03-21 09:19] 
+Total VRAM 24576 MB, total RAM 24576 MB
+[2024-03-21 09:19] Set vram state to: SHARED
+[2024-03-21 09:19] Device: mps
+[2024-03-21 09:19] VAE dtype: torch.float32
+[2024-03-21 09:19] Using sub quadratic optimization for cross attention, if you have memory or speed issues try using: --use-split-cross-attention
+[2024-03-21 09:19] ### Loading: ComfyUI-Manager (V2.10.2)
+[2024-03-21 09:19] ### ComfyUI Revision: 2080 on 'change_for_online' [bc33e369] | Released on '2024-03-20'
+[2024-03-21 09:19] ### Loading: ComfyUI-Impact-Pack (V4.83.6)
+[2024-03-21 09:19] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-03-21 09:19] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-03-21 09:19] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-03-21 09:19] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-03-21 09:19] ### Loading: ComfyUI-Impact-Pack (Subpack: V0.4)
+[2024-03-21 09:19] [Impact Pack] Wildcards loading done.
+[2024-03-21 09:19] [1;35m### [START] ComfyUI AlekPet Nodes ###[0m
+[2024-03-21 09:19] [92mNode -> PainterNode [Loading][0m
+[2024-03-21 09:19] [92mNode -> PoseNode [Loading][0m
+[2024-03-21 09:19] [92mNode -> GoogleTranslateNode [Loading][0m
+[2024-03-21 09:19] [92mNode -> DeepTranslatorNode [Loading][0m
+[2024-03-21 09:19] [92mNode -> ArgosTranslateNode [Loading][0m
+[2024-03-21 09:19] [92mNode -> ExtrasNode [Loading][0m
+[2024-03-21 09:19] [1;35m### [END] ComfyUI AlekPet Nodes ###[0m
+[2024-03-21 09:19] 
+Import times for custom nodes:
+[2024-03-21 09:19]    0.0 seconds: /Users/wangjian/Documents/GitHub/learn/test/ComfyUI/custom_nodes/AIGODLIKE-COMFYUI-TRANSLATION
+[2024-03-21 09:19]    0.0 seconds: /Users/wangjian/Documents/GitHub/learn/test/ComfyUI/custom_nodes/sdxl_prompt_styler
+[2024-03-21 09:19]    0.0 seconds: /Users/wangjian/Documents/GitHub/learn/test/ComfyUI/custom_nodes/efficiency-nodes-comfyui
+[2024-03-21 09:19]    0.1 seconds: /Users/wangjian/Documents/GitHub/learn/test/ComfyUI/custom_nodes/OneButtonPrompt
+[2024-03-21 09:19]    0.1 seconds: /Users/wangjian/Documents/GitHub/learn/test/ComfyUI/custom_nodes/ComfyUI-Manager
+[2024-03-21 09:19]    0.3 seconds: /Users/wangjian/Documents/GitHub/learn/test/ComfyUI/custom_nodes/ComfyUI-NegiTools
+[2024-03-21 09:19]    3.9 seconds: /Users/wangjian/Documents/GitHub/learn/test/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
+[2024-03-21 09:19]    5.1 seconds: /Users/wangjian/Documents/GitHub/learn/test/ComfyUI/custom_nodes/ComfyUI_Custom_Nodes_AlekPet
+[2024-03-21 09:19] 
+[2024-03-21 09:19] Starting server
+
+[2024-03-21 09:19] To see the GUI go to: http://127.0.0.1:8188
+[2024-03-21 09:19] FETCH DATA from: /Users/wangjian/Documents/GitHub/learn/test/ComfyUI/custom_nodes/ComfyUI-Manager/extension-node-map.json
+[2024-03-21 09:33] FETCH DATA from: /Users/wangjian/Documents/GitHub/learn/test/ComfyUI/custom_nodes/ComfyUI-Manager/extension-node-map.json
+[2024-03-21 09:36] FETCH DATA from: /Users/wangjian/Documents/GitHub/learn/test/ComfyUI/custom_nodes/ComfyUI-Manager/extension-node-map.json
+[2024-03-21 09:37] got prompt
+[2024-03-21 09:37] model_type EPS
+[2024-03-21 09:37] Using split attention in VAE
+[2024-03-21 09:37] Using split attention in VAE
+[2024-03-21 09:37] clip missing: ['clip_l.logit_scale', 'clip_l.transformer.text_projection.weight']
+[2024-03-21 09:37] [Deep Translator] Service: "MyMemoryTranslator"
+[2024-03-21 09:37] [Deep Translator] Proxy disabled or input field is empty!
+[2024-03-21 09:37] [Deep Translator] Authorization input field is empty!
+[2024-03-21 09:37] Deep Translator] Service detect language disabled! Services support: DeeplTranslator, QcriTranslator, LingueeTranslator, PonsTranslator, PapagoTranslator, BaiduTranslator, MyMemoryTranslator.
+The selected service has its own way of detecting the language.
+Property "detect_lang_api_key" in Authorization data is empty or incorrect!
+[2024-03-21 09:37] style: sai-enhance
+[2024-03-21 09:37] text_positive: A beautiful girl
+[2024-03-21 09:37] text_negative: deformed, bad anatomy, disfigured, poorly drawn face, mutated, extra limb, ugly, poorly drawn hands, missing limb, floating limbs, disconnected limbs, disconnected head, malformed hands, long neck, mutated hands and fingers, bad hands, missing fingers, cropped, worst quality, low quality, mutation, poorly drawn, huge calf, bad hands, fused hand, missing hand, disappearing arms, disappearing thigh, disappearing calf, disappearing legs, missing fingers, fused fingers, abnormal eye proportion, Abnormal hands, abnormal legs, abnormal feet, abnormal fingers, drawing, painting, crayon, sketch, graphite, impressionist, noisy, blurry, soft, deformed, ugly, anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch
+[2024-03-21 09:37] text_positive_styled: breathtaking A beautiful girl . award-winning, professional, highly detailed
+[2024-03-21 09:37] text_negative_styled: ugly, deformed, noisy, blurry, distorted, grainy, deformed, bad anatomy, disfigured, poorly drawn face, mutated, extra limb, ugly, poorly drawn hands, missing limb, floating limbs, disconnected limbs, disconnected head, malformed hands, long neck, mutated hands and fingers, bad hands, missing fingers, cropped, worst quality, low quality, mutation, poorly drawn, huge calf, bad hands, fused hand, missing hand, disappearing arms, disappearing thigh, disappearing calf, disappearing legs, missing fingers, fused fingers, abnormal eye proportion, Abnormal hands, abnormal legs, abnormal feet, abnormal fingers, drawing, painting, crayon, sketch, graphite, impressionist, noisy, blurry, soft, deformed, ugly, anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch
+[2024-03-21 09:37] Requested to load SD1ClipModel
+[2024-03-21 09:37] Loading 1 new model
+[2024-03-21 09:37] Requested to load BaseModel
+[2024-03-21 09:37] Loading 1 new model
