@@ -140,6 +140,13 @@ class PromptServer():
 
             return web.json_response(extensions)
 
+        @routes.get("/nodes")
+        async def get_nodes(request):
+            result = {}
+            for key, value in nodes.NODE_CLASS_MAPPINGS.items():
+                result[key] = nodes.serializer_node(value)
+            return web.json_response(result)
+
         def get_dir_by_type(dir_type):
             if dir_type is None:
                 dir_type = "input"

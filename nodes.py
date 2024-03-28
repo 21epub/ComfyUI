@@ -1984,3 +1984,12 @@ def init_custom_nodes():
         else:
             logging.warning("Please do a: pip install -r requirements.txt")
         logging.warning("")
+
+def serializer_node(node_class):
+    return {
+        "INPUT_TYPES": node_class.INPUT_TYPES(),
+        "OUTPUT_NODE": getattr(node_class, "OUTPUT_NODE", False),
+        "CATEGORY": node_class.CATEGORY,
+        "RETURN_TYPES": node_class.RETURN_TYPES
+    }
+
